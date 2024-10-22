@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout con Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            font-size: 5rem;
+            color: white;
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .box {
+            border: 3px solid black;
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .red {
+            background-image: url('ambu.jpg');
+            flex: 2;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .blue {
+            background-image: url('ambu2.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            flex: 1;
+        }
+
+        .green {
+            background-image: url('papas.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red">1</div>
+        <div class="column">
+            <div class="box blue">2</div>
+            <div class="box green">3</div>
+        </div>
+    </div>
+</body>
+</html>
